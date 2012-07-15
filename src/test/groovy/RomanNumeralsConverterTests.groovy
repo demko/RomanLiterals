@@ -51,7 +51,7 @@ class RomanNumeralsConverterTests extends Specification {
     }
 
     @FailsWith(IllegalArgumentException.class)
-    def "fail when invalid decimal"() {
+    def "fail if invalid decimal"() {
         expect:
         decimalToRoman(decimal) == roman
 
@@ -62,7 +62,7 @@ class RomanNumeralsConverterTests extends Specification {
     }
 
     @FailsWith(IllegalArgumentException.class)
-    def "fail when invalid roman numeral"() {
+    def "fail if invalid roman numeral"() {
         expect:
         romanToDecimal(roman) == decimal
 
