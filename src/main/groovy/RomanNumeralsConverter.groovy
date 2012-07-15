@@ -17,17 +17,17 @@ class RomanNumeralsConverter {
 
     static def romanToDecimal(String roman) {
         roman = roman.toUpperCase()
-        def resultMillennia = romanToDecimalPartialConverter(roman, romanNumerals.from1000, 1000)
-        def result100To900 = romanToDecimalPartialConverter(resultMillennia.remainder, romanNumerals.from100To900, 100)
-        def result10To90 = romanToDecimalPartialConverter(result100To900.remainder, romanNumerals.from10To90, 10)
-        def result1To9 = romanToDecimalPartialConverter(result10To90.remainder, romanNumerals.from1To9, 1)
+        def resultMillennia = convertRomanToDecimal(roman, romanNumerals.from1000, 1000)
+        def result100To900 = convertRomanToDecimal(resultMillennia.remainder, romanNumerals.from100To900, 100)
+        def result10To90 = convertRomanToDecimal(result100To900.remainder, romanNumerals.from10To90, 10)
+        def result1To9 = convertRomanToDecimal(result10To90.remainder, romanNumerals.from1To9, 1)
         if (result1To9.remainder) {
             throw new IllegalArgumentException("roman ${roman} has invalid ${result1To9.remainder} value")
         }
         resultMillennia.decimal + result100To900.decimal + result10To90.decimal + result1To9.decimal
     }
 
-    private static def romanToDecimalPartialConverter(roman, conversionTable, multiplier) {
+    private static def convertRomanToDecimal(roman, conversionTable, multiplier) {
         def decimal = 0
         int index = conversionTable.size() - 1
         conversionTable.reverse().each { numeral ->
