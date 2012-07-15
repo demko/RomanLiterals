@@ -41,7 +41,7 @@ class RomanNumeralsConverter {
     }
 
     private static def ensureValidDecimalNumber(decimal) {
-        if (decimal < 0 || decimal > 3000) {
+        if (decimal < 1 || decimal > 3000) {
             throw new IllegalArgumentException("invald decimal ${decimal}")
         }
     }

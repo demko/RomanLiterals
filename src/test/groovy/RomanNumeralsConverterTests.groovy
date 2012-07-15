@@ -57,6 +57,7 @@ class RomanNumeralsConverterTests extends Specification {
         where:
         decimal  | roman
         -1       | 'exception expected'
+        0        | 'exception expected'
         5000     | 'exception expected'
     }
 
