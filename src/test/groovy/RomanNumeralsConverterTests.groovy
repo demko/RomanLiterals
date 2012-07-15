@@ -45,7 +45,6 @@ class RomanNumeralsConverterTests extends Specification {
         decimal  | roman
         99       | 'XCIX'
         998      | 'CMXCVIII'
-        998      | 'CMXCVIII'
         999      | 'CMXCIX'
         1999     | 'MCMXCIX'
     }
