@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" hostname="filippos-iMac.local" name="RomanNumeralsConverterTests" tests="5" time="0.544" timestamp="2012-07-15T17:21:52">
+  <properties />
+  <testcase classname="RomanNumeralsConverterTests" name="convert vanilla roman numerals" time="0.187" />
+  <testcase classname="RomanNumeralsConverterTests" name="convert roman numerals" time="0.0080" />
+  <testcase classname="RomanNumeralsConverterTests" name="convert roman numerals edge cases" time="0.0080" />
+  <testcase classname="RomanNumeralsConverterTests" name="throw exception when invalid decimal" time="0.017" />
+  <testcase classname="RomanNumeralsConverterTests" name="throw exception when invalid roman numeral" time="0.0020" />
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

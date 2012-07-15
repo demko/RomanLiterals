@@ -1,8 +1,10 @@
 import spock.lang.FailsWith
+import spock.lang.Specification
+
 import static RomanNumeralsConverter.decimalToRoman
 import static RomanNumeralsConverter.romanToDecimal
 
-class RomanNumeralsConverterTests extends spock.lang.Specification {
+class RomanNumeralsConverterTests extends Specification {
 
     def "convert vanilla roman numerals"() {
         expect:
@@ -49,7 +51,7 @@ class RomanNumeralsConverterTests extends spock.lang.Specification {
     }
 
     @FailsWith(IllegalArgumentException.class)
-    def "throws exception when invalid decimal"() {
+    def "throw exception when invalid decimal"() {
         expect:
         decimalToRoman(decimal) == roman
 
@@ -60,7 +62,7 @@ class RomanNumeralsConverterTests extends spock.lang.Specification {
     }
 
     @FailsWith(IllegalArgumentException.class)
-    def "throws exception when invalid roman numeral"() {
+    def "throw exception when invalid roman numeral"() {
         expect:
         romanToDecimal(roman) == decimal
 

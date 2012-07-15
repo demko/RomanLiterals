@@ -3,7 +3,7 @@ class RomanNumeralsConverter {
             from1To9 :     [ '', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX' ],
             from10To90 :   [ '', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC' ],
             from100To900 : [ '', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM' ],
-            from1000     : [ '', 'M', 'MM', 'MMM' ]
+            from1000 :     [ '', 'M', 'MM', 'MMM' ]
     ]
 
     static def decimalToRoman(int decimal) {
